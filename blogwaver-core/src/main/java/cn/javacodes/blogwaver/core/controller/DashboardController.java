@@ -21,7 +21,7 @@ public class DashboardController {
     private static final Logger LOGGER = LoggerFactory.getLogger(DashboardController.class);
 
     @RequestMapping(method = RequestMethod.GET)
-    public String initDashboard() throws InterruptedException {
+    public String initDashboard(){
         LOGGER.info("initDashboard");
         return "admin-index.ftl";
     }
