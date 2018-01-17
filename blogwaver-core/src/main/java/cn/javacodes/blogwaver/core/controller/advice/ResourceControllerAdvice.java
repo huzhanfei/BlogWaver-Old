@@ -1,4 +1,4 @@
-package cn.javacodes.blogwaver.core.advice;
+package cn.javacodes.blogwaver.core.controller.advice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ControllerAdvice;

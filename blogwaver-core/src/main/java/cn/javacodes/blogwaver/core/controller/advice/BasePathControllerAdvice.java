@@ -1,4 +1,4 @@
-package cn.javacodes.blogwaver.core.advice;
+package cn.javacodes.blogwaver.core.controller.advice;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;

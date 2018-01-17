@@ -24,6 +24,8 @@ module blogwaver.core {
     requires commons.collections4;
     requires org.apache.commons.lang3;
     requires webjars.locator.core;
+    requires aspectjweaver;
+    requires spring.jdbc;
 
     exports cn.javacodes.blogwaver.core.config to blogwaver.base;
 

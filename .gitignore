@@ -32,3 +32,5 @@ out/
 # Custom
 *.log
 src/main/webapp/logs
+*.DS_Store
+classes/
