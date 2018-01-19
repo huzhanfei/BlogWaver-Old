@@ -1,6 +1,9 @@
 <#import "common/admin-common.ftl" as common>
+<#import "common/resource-import.ftl" as res>
+
 <@common.content>
-<link rel="stylesheet" type="text/css" href="${basePath}${urls.getForLookupPath("/libs/AdminLTE/plugins/iCheck/flat/blue.css")}"/>
+<@res.cssRef url="/libs/AdminLTE/plugins/iCheck/flat/blue.css"/>
+<@res.cssRef url="/libs/AdminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.css"/>
 <!-- Main content -->
 <section class="content">
     <div class="row">
@@ -12,7 +15,7 @@
 
                     <div class="box-tools pull-right">
                         <div class="has-feedback">
-                            <input type="text" class="form-control input-sm" placeholder=<@spring.message code="sitemail.searchmail"/>>
+                            <input type="text" class="form-control input-sm global_filter" id="global_filter" placeholder=<@spring.message code="sitemail.searchmail"/>>
                             <span class="glyphicon glyphicon-search form-control-feedback"></span>
                         </div>
                     </div>
@@ -35,160 +38,136 @@
                         </div>
                         <!-- /.btn-group -->
                         <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
-                        <a href="${basePath}/admin/sitemail/compose" class="btn btn-primary" style="height: 30px;"><@spring.message code="sitemail.compose"/></a>
-                        <div class="pull-right">
-                            1-50/200
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-sm"><i
-                                        class="fa fa-chevron-left"></i></button>
-                                <button type="button" class="btn btn-default btn-sm"><i
-                                        class="fa fa-chevron-right"></i></button>
-                            </div>
-                            <!-- /.btn-group -->
-                        </div>
-                        <!-- /.pull-right -->
+                        <a href="${basePath}/admin/sitemail/compose" class="btn btn-primary" style="height: 30px;"><i class="fa fa-pencil"></i></a>
                     </div>
-                    <div class="table-responsive mailbox-messages">
-                        <table class="table table-hover table-striped">
+                    <div class="box-body mailbox-messages table-responsive">
+                        <table id="inbox-table" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th><@spring.message code="sitemail.sender"/></th>
+                                <th><@spring.message code="sitemail.subject"/></th>
+                                <th><@spring.message code="sitemail.abstract"/></th>
+                                <th><@spring.message code="sitemail.send_time"/></th>
+                            </tr>
+                            </thead>
                             <tbody>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"></td>
-                                <td class="mailbox-date">5 mins ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
-                                <td class="mailbox-date">28 mins ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
-                                <td class="mailbox-date">11 hours ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"></td>
-                                <td class="mailbox-date">15 hours ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
-                                <td class="mailbox-date">Yesterday</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
-                                <td class="mailbox-date">2 days ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
-                                <td class="mailbox-date">2 days ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"></td>
-                                <td class="mailbox-date">2 days ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"></td>
-                                <td class="mailbox-date">2 days ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"></td>
-                                <td class="mailbox-date">2 days ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
-                                <td class="mailbox-date">4 days ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"></td>
-                                <td class="mailbox-date">12 days ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
-                                <td class="mailbox-date">12 days ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
-                                <td class="mailbox-date">14 days ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Old Hu</a></td>
+                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>Let's go to the chuzhanggui restaurant in ... </td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox"></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to
-                                    this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
-                                <td class="mailbox-date">15 days ago</td>
+                                <td><input type="checkbox"/></td>
+                                <td><a href="#">Kevin</a></td>
+                                <td><a href="#" class="col-sm-10">[response to Old Hu] about invitation</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td>OK!</td>
+                                <td>2018/1/17 8:00</td>
                             </tr>
                             </tbody>
+                            <tfoot>
+                            <tr>
+                                <th></th>
+                                <th><@spring.message code="sitemail.sender"/></th>
+                                <th><@spring.message code="sitemail.subject"/></th>
+                                <th><@spring.message code="sitemail.abstract"/></th>
+                                <th><@spring.message code="sitemail.send_time"/></th>
+                            </tr>
+                            </tfoot>
                         </table>
-                        <!-- /.table -->
                     </div>
                     <!-- /.mail-box-messages -->
                 </div>
@@ -209,17 +188,6 @@
                         </div>
                         <!-- /.btn-group -->
                         <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
-                        <div class="pull-right">
-                            1-50/200
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-sm"><i
-                                        class="fa fa-chevron-left"></i></button>
-                                <button type="button" class="btn btn-default btn-sm"><i
-                                        class="fa fa-chevron-right"></i></button>
-                            </div>
-                            <!-- /.btn-group -->
-                        </div>
-                        <!-- /.pull-right -->
                     </div>
                 </div>
             </div>
@@ -230,9 +198,54 @@
     <!-- /.row -->
 </section>
 <!-- /.Main content -->
-<script src="${basePath}${urls.getForLookupPath("/libs/AdminLTE/plugins/iCheck/icheck.js")}"></script>
+<@res.jsRef url="/libs/AdminLTE/bower_components/datatables.net/js/jquery.dataTables.js"/>
+<@res.jsRef url="/libs/AdminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.js"/>
+<@res.jsRef url="/libs/AdminLTE/plugins/iCheck/icheck.js"/>
 <script>
-    $(function () {
+
+    function filterGlobal(table, value){
+        table.search(value, true, true).draw();
+    }
+
+    function initInboxTable(){
+        //Todo: 解决表格第一列关闭排序功能后仍显示排序图标
+        var inboxTable = $('#inbox-table').DataTable({
+            'paging'      : true,
+            'lengthChange': false,
+            'searching'   : true,
+            'ordering'    : true,
+            'info'        : true,
+            'autoWidth'   : false,
+            'dom': 'rtip',
+            'columnDefs': [{'orderable': false, 'targets': 0}],
+            'language': {
+                "sProcessing":   "<@spring.message code="sitemail.sProcessing"/>",
+                "sLengthMenu":   "<@spring.message code="sitemail.sLengthMenu"/>",
+                "sZeroRecords":  "<@spring.message code="sitemail.sZeroRecords"/>",
+                "sInfo":         "<@spring.message code="sitemail.sInfo"/>",
+                "sInfoEmpty":    "<@spring.message code="sitemail.sInfoEmpty"/>",
+                "sInfoFiltered": "<@spring.message code="sitemail.sInfoFiltered"/>",
+                "sInfoPostFix":  "<@spring.message code="sitemail.sInfoPostFix"/>",
+                "sSearch":       "<@spring.message code="sitemail.sSearch"/>",
+                "sEmptyTable":   "<@spring.message code="sitemail.sEmptyTable"/>",
+                "sLoadingRecords": "<@spring.message code="sitemail.sLoadingRecords"/>",
+                "sInfoThousands":  "<@spring.message code="sitemail.sInfoThousands"/>",
+                "oPaginate": {
+                    "sFirst":    "<@spring.message code="sitemail.oPaginate.sFirst"/>",
+                    "sPrevious": "<@spring.message code="sitemail.oPaginate.sPrevious"/>",
+                    "sNext":     "<@spring.message code="sitemail.oPaginate.sNext"/>",
+                    "sLast":     "<@spring.message code="sitemail.oPaginate.sLast"/>"
+                },
+                "oAria": {
+                    "sSortAscending":  "<@spring.message code="sitemail.oAria.sSortAscending"/>",
+                    "sSortDescending": "<@spring.message code="sitemail.oAria.sSortDescending"/>"
+                }
+            }
+        });
+        return inboxTable;
+    }
+
+    function enableICheckPlugin(){
         //Enable iCheck plugin for checkboxes
         //iCheck for checkbox and radio inputs
         $('.mailbox-messages input[type="checkbox"]').iCheck({
@@ -254,26 +267,17 @@
             }
             $(this).data("clicks", !clicks);
         });
+    }
 
-        //Handle starring for glyphicon and font awesome
-        $(".mailbox-star").click(function (e) {
-            e.preventDefault();
-            //detect type
-            var $this = $(this).find("a > i");
-            var glyph = $this.hasClass("glyphicon");
-            var fa = $this.hasClass("fa");
+    $(function () {
+        enableICheckPlugin();
+        var inboxTable = initInboxTable();
 
-            //Switch states
-            if (glyph) {
-                $this.toggleClass("glyphicon-star");
-                $this.toggleClass("glyphicon-star-empty");
-            }
-
-            if (fa) {
-                $this.toggleClass("fa-star");
-                $this.toggleClass("fa-star-o");
-            }
+        $('input.global_filter').on('keyup', function(){
+            filterGlobal(inboxTable, $('#global_filter').val());
         });
-    });
+
+    })
+
 </script>
 </@common.content>
