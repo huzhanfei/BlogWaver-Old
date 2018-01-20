@@ -22,6 +22,6 @@ module blogwaver.base {
     requires org.apache.commons.lang3;
     requires webjars.locator.core;
 
-    requires blogwaver.core;
     requires javax.servlet.api;
+    requires transitive blogwaver.core;
 }

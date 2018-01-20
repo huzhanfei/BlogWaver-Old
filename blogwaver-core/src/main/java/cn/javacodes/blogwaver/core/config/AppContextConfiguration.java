@@ -27,9 +27,9 @@ import org.springframework.util.ResourceUtils;
         }
 )
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-@PropertySource({
-        ResourceUtils.CLASSPATH_URL_PREFIX + "config.properties",
-        ResourceUtils.CLASSPATH_URL_PREFIX + "important.properties"
+@PropertySources({
+        @PropertySource(name = "config.properties", value = "classpath:config.properties"),
+        @PropertySource(name = "important.properties", value = "classpath:important.properties"),
 })
 public class AppContextConfiguration {
 

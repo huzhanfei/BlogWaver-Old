@@ -6,8 +6,14 @@
  * @since 2018/1/14
  */
 module blogwaver.core {
-    requires javax.servlet.api;
 
+    exports cn.javacodes.blogwaver.core.config to blogwaver.base;
+
+    exports cn.javacodes.blogwaver.core.annotation.datasource;
+    exports cn.javacodes.blogwaver.core.common.datatables;
+
+
+    requires javax.servlet.api;
     requires spring.beans;
     requires spring.core;
     requires spring.context;
@@ -16,7 +22,6 @@ module blogwaver.core {
     requires spring.webmvc;
     requires spring.security.config;
     requires spring.context.support;
-
     requires druid;
     requires org.apache.logging.log4j.core;
     requires slf4j.api;
@@ -26,7 +31,11 @@ module blogwaver.core {
     requires webjars.locator.core;
     requires aspectjweaver;
     requires spring.jdbc;
-
-    exports cn.javacodes.blogwaver.core.config to blogwaver.base;
+    requires java.sql;
+    requires mybatis.spring;
+    requires mybatis;
+    requires pagehelper;
+    requires java.naming;
+    requires java.management;
 
 }
