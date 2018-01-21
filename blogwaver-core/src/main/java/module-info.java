@@ -9,7 +9,11 @@ module blogwaver.core {
 
     exports cn.javacodes.blogwaver.core.config to blogwaver.base;
 
-    exports cn.javacodes.blogwaver.core.annotation.datasource;
+    exports cn.javacodes.blogwaver.core.service;
+    exports cn.javacodes.blogwaver.core.repository;
+    exports cn.javacodes.blogwaver.core.handler;
+    exports cn.javacodes.blogwaver.core.util;
+    exports cn.javacodes.blogwaver.core.i18n;
     exports cn.javacodes.blogwaver.core.common.datatables;
 
 
@@ -37,5 +41,6 @@ module blogwaver.core {
     requires pagehelper;
     requires java.naming;
     requires java.management;
+    requires javax.inject;
 
 }
