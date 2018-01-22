@@ -1,7 +1,11 @@
 <#import "common/admin-common.ftl" as common>
+<#import "common/resource-import.ftl" as res>
 <@common.content>
 <title>撰写文章</title>
-
+<!-- Select2 -->
+<@res.cssRef url="/libs/select2/dist/css/select2.min.css"/>
+<!-- Theme style -->
+<@res.cssRef url="/libs/AdminLTE/dist/css/AdminLTE.min.css"/>
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -89,8 +93,6 @@
                         </div>
 
 
-
-
                     </form>
                 </div>
                 <!-- /.box-body -->
@@ -104,10 +106,14 @@
     <!-- ./row -->
 </section>
 <!-- /.content -->
+<!--CKEditor-->
+<@res.jsRef url="/libs/ckeditor/standard/ckeditor.js"/>
+<!--Select2-->
+<@res.jsRef url="/libs/select2/dist/js/select2.full.min.js"/>
 <script type="text/javascript">
     $(function () {
         CKEDITOR.replace('editor1');
         $('.select2').select2();
-    })
+    });
 </script>
 </@common.content>

@@ -18,8 +18,6 @@
     <@cssRef url="/libs/ionicons/css/ionicons.min.css"/>
     <!-- NProgress -->
     <@cssRef url="/libs/nprogress/nprogress.css"/>
-    <!-- Select2 -->
-    <@cssRef url="/libs/select2/dist/css/select2.min.css"/>
     <!-- Theme style -->
     <@cssRef url="/libs/AdminLTE/dist/css/AdminLTE.min.css"/>
     <!-- admin skins -->
@@ -29,8 +27,7 @@
     <!-- Bootstrap 3.3.7 -->
     <@jsRef url="/libs/bootstrap/js/bootstrap.min.js"/>
     <!-- jQuery PJAX -->
-    <@jsRef url="/libs/jquery-pjax/jquery.pjax.js"/>
-
+    <@jsRef url="/assets/js/jquery-pjax-master/jquery.pjax.js"/>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini fixed">
@@ -51,7 +48,6 @@
     <#include "../includes/admin-footer.ftl"/>
     <#include "../includes/admin-control-sidebar.ftl"/>
 
-
     <!-- FastClick -->
     <@jsRef url="/libs/fastclick/fastclick.js"/>
     <!-- SlimScoll -->
@@ -60,13 +56,8 @@
     <@jsRef url="/libs/nprogress/nprogress.js"/>
     <!-- AdminLTE App -->
     <@jsRef url="/libs/AdminLTE/dist/js/adminlte.min.js"/>
-    <!--CKEditor-->
-    <@jsRef url="/libs/ckeditor/standard/ckeditor.js"/>
-    <!--Select2-->
-    <@jsRef url="/libs/select2/dist/js/select2.full.min.js"/>
     <!-- Admin Common -->
     <@jsRef url="/assets/js/admin-common.js"/>
-
 </body>
 </html>
 </#if>
