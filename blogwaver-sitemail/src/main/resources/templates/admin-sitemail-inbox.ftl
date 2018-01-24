@@ -58,7 +58,7 @@
                                 <tr>
                                     <td><input type="checkbox"/></td>
                                     <td><a href="#">Old Hu</a></td>
-                                    <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#"
+                                    <td><a href="${basePath}/admin/sitemail/readmail" class="col-sm-10">Old Hu please eat rice</a><a href="#"
                                                                                                    class="col-sm-2"><i
                                             class="fa fa-paperclip"></i></a></td>
                                     <td>Let's go to the chuzhanggui restaurant in ...</td>
@@ -68,7 +68,7 @@
                             <tr>
                                 <td><input type="checkbox"/></td>
                                 <td><a href="#">Kevin</a></td>
-                                <td><a href="#" class="col-sm-10">[response to Old Hu] about invitation</a><a href="#"
+                                <td><a href="${basePath}/admin/sitemail/readmail" class="col-sm-10">[response to Old Hu] about invitation</a><a href="#"
                                                                                                               class="col-sm-2"><i
                                         class="fa fa-paperclip"></i></a></td>
                                 <td>OK!</td>
