@@ -44,4 +44,10 @@ public class SiteMailController {
         return "admin-sitemail-trash.ftl";
     }
 
+    @RequestMapping(value = "/readmail", method= RequestMethod.GET)
+    public String initReadMailPage(){
+        LOGGER.info("initReadMailPage");
+        return "admin-sitemail-readmail.ftl";
+    }
+
 }
