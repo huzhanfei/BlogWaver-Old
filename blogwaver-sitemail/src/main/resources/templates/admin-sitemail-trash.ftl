@@ -34,6 +34,7 @@
                         </div>
                         <!-- /.btn-group -->
                         <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                        <a href="#" class="btn btn-default btn-sm" title="<@spring.message code="sitemail.moveout"/>"><i class="fa fa-arrow-up text-black"></i></a>
                     </div>
                     <div class="box-body mailbox-messages table-responsive">
                         <table id="inbox-table" class="table table-bordered table-striped">
@@ -51,7 +52,7 @@
                                 <tr>
                                     <td><input type="checkbox"/></td>
                                     <td><a href="#">Old Hu</a></td>
-                                    <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#"
+                                    <td><a href="${basePath}/admin/sitemail/readmail" class="col-sm-10">Old Hu please eat rice</a><a href="#"
                                                                                                    class="col-sm-2"><i
                                             class="fa fa-paperclip"></i></a></td>
                                     <td>Let's go to the chuzhanggui restaurant in ...</td>
@@ -61,10 +62,10 @@
                             <tr>
                                 <td><input type="checkbox"/></td>
                                 <td><a href="#">Kevin</a></td>
-                                <td><a href="#" class="col-sm-10">[response to Old Hu] about invitation</a><a href="#"
+                                <td><a href="${basePath}/admin/sitemail/compose" class="col-sm-10">[response to Old Hu] about invitation</a><a href="#"
                                                                                                               class="col-sm-2"><i
                                         class="fa fa-paperclip"></i></a></td>
-                                <td><span class="draft text-red">OK!</td>
+                                <td><span class="draft text-red">[<@spring.message code="sitemail.draft"/>]</span>OK!</td>
                                 <td>2018/1/17 8:00</td>
                             </tr>
                             </tbody>
@@ -94,6 +95,7 @@
                         </div>
                         <!-- /.btn-group -->
                         <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                        <a href="#" class="btn btn-default btn-sm" title="<@spring.message code="sitemail.moveout"/>"><i class="fa fa-arrow-up text-black"></i></a>
                     </div>
                 </div>
             </div>
