@@ -2,8 +2,8 @@
 <#import "common/resource-import.ftl" as res>
 
 <@common.content>
-<@res.cssRef url="/libs/AdminLTE/plugins/iCheck/flat/blue.css"/>
-<@res.cssRef url="/libs/AdminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.css"/>
+    <@res.cssRef url="/libs/AdminLTE/plugins/iCheck/flat/blue.css"/>
+    <@res.cssRef url="/libs/AdminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.css"/>
 <!-- Main content -->
 <section class="content">
     <div class="row">
@@ -15,7 +15,8 @@
 
                     <div class="box-tools pull-right">
                         <div class="has-feedback">
-                            <input type="text" class="form-control input-sm global_filter" id="global_filter" placeholder=<@spring.message code="sitemail.searchmail"/>>
+                            <input type="text" class="form-control input-sm global_filter" id="global_filter"
+                                   placeholder=<@spring.message code="sitemail.searchmail"/>>
                             <span class="glyphicon glyphicon-search form-control-feedback"></span>
                         </div>
                     </div>
@@ -38,7 +39,8 @@
                         </div>
                         <!-- /.btn-group -->
                         <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
-                        <a href="${basePath}/admin/sitemail/compose" class="btn btn-primary" style="height: 30px;"><i class="fa fa-pencil"></i></a>
+                        <a href="${basePath}/admin/sitemail/compose" class="btn btn-primary" style="height: 30px;"><i
+                                class="fa fa-pencil"></i></a>
                     </div>
                     <div class="box-body mailbox-messages table-responsive">
                         <table id="inbox-table" class="table table-bordered table-striped">
@@ -52,108 +54,23 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"/></td>
-                                <td><a href="#">Old Hu</a></td>
-                                <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
-                                <td>Let's go to the chuzhanggui restaurant in ... </td>
-                                <td>2018/1/17 8:00</td>
-                            </tr>
+                            <#list 1..14 as mail>
+                                <tr>
+                                    <td><input type="checkbox"/></td>
+                                    <td><a href="#">Old Hu</a></td>
+                                    <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#"
+                                                                                                   class="col-sm-2"><i
+                                            class="fa fa-paperclip"></i></a></td>
+                                    <td>Let's go to the chuzhanggui restaurant in ...</td>
+                                    <td>2018/1/17 8:00</td>
+                                </tr>
+                            </#list>
                             <tr>
                                 <td><input type="checkbox"/></td>
                                 <td><a href="#">Kevin</a></td>
-                                <td><a href="#" class="col-sm-10">[response to Old Hu] about invitation</a><a href="#" class="col-sm-2"><i class="fa fa-paperclip"></i></a></td>
+                                <td><a href="#" class="col-sm-10">[response to Old Hu] about invitation</a><a href="#"
+                                                                                                              class="col-sm-2"><i
+                                        class="fa fa-paperclip"></i></a></td>
                                 <td>OK!</td>
                                 <td>2018/1/17 8:00</td>
                             </tr>
@@ -198,46 +115,46 @@
     <!-- /.row -->
 </section>
 <!-- /.Main content -->
-<@res.jsRef url="/libs/AdminLTE/bower_components/datatables.net/js/jquery.dataTables.js"/>
-<@res.jsRef url="/libs/AdminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.js"/>
-<@res.jsRef url="/libs/AdminLTE/plugins/iCheck/icheck.js"/>
+    <@res.jsRef url="/libs/AdminLTE/bower_components/datatables.net/js/jquery.dataTables.js"/>
+    <@res.jsRef url="/libs/AdminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.js"/>
+    <@res.jsRef url="/libs/AdminLTE/plugins/iCheck/icheck.js"/>
 <script>
 
-    function filterGlobal(table, value){
+    function filterGlobal(table, value) {
         table.search(value, true, true).draw();
     }
 
-    function initInboxTable(){
-        //Todo: 解决表格第一列关闭排序功能后仍显示排序图标
+    function initInboxTable() {
+        //TODO: 解决表格第一列关闭排序功能后仍显示排序图标
         var inboxTable = $('#inbox-table').DataTable({
-            'paging'      : true,
+            'paging': true,
             'lengthChange': false,
-            'searching'   : true,
-            'ordering'    : true,
-            'info'        : true,
-            'autoWidth'   : false,
+            'searching': true,
+            'ordering': true,
+            'info': true,
+            'autoWidth': false,
             'dom': 'rtip',
             'columnDefs': [{'orderable': false, 'targets': 0}],
             'language': {
-                "sProcessing":   "<@spring.message code="sitemail.sProcessing"/>",
-                "sLengthMenu":   "<@spring.message code="sitemail.sLengthMenu"/>",
-                "sZeroRecords":  "<@spring.message code="sitemail.sZeroRecords"/>",
-                "sInfo":         "<@spring.message code="sitemail.sInfo"/>",
-                "sInfoEmpty":    "<@spring.message code="sitemail.sInfoEmpty"/>",
+                "sProcessing": "<@spring.message code="sitemail.sProcessing"/>",
+                "sLengthMenu": "<@spring.message code="sitemail.sLengthMenu"/>",
+                "sZeroRecords": "<@spring.message code="sitemail.sZeroRecords"/>",
+                "sInfo": "<@spring.message code="sitemail.sInfo"/>",
+                "sInfoEmpty": "<@spring.message code="sitemail.sInfoEmpty"/>",
                 "sInfoFiltered": "<@spring.message code="sitemail.sInfoFiltered"/>",
-                "sInfoPostFix":  "<@spring.message code="sitemail.sInfoPostFix"/>",
-                "sSearch":       "<@spring.message code="sitemail.sSearch"/>",
-                "sEmptyTable":   "<@spring.message code="sitemail.sEmptyTable"/>",
+                "sInfoPostFix": "<@spring.message code="sitemail.sInfoPostFix"/>",
+                "sSearch": "<@spring.message code="sitemail.sSearch"/>",
+                "sEmptyTable": "<@spring.message code="sitemail.sEmptyTable"/>",
                 "sLoadingRecords": "<@spring.message code="sitemail.sLoadingRecords"/>",
-                "sInfoThousands":  "<@spring.message code="sitemail.sInfoThousands"/>",
+                "sInfoThousands": "<@spring.message code="sitemail.sInfoThousands"/>",
                 "oPaginate": {
-                    "sFirst":    "<@spring.message code="sitemail.oPaginate.sFirst"/>",
+                    "sFirst": "<@spring.message code="sitemail.oPaginate.sFirst"/>",
                     "sPrevious": "<@spring.message code="sitemail.oPaginate.sPrevious"/>",
-                    "sNext":     "<@spring.message code="sitemail.oPaginate.sNext"/>",
-                    "sLast":     "<@spring.message code="sitemail.oPaginate.sLast"/>"
+                    "sNext": "<@spring.message code="sitemail.oPaginate.sNext"/>",
+                    "sLast": "<@spring.message code="sitemail.oPaginate.sLast"/>"
                 },
                 "oAria": {
-                    "sSortAscending":  "<@spring.message code="sitemail.oAria.sSortAscending"/>",
+                    "sSortAscending": "<@spring.message code="sitemail.oAria.sSortAscending"/>",
                     "sSortDescending": "<@spring.message code="sitemail.oAria.sSortDescending"/>"
                 }
             }
@@ -245,7 +162,7 @@
         return inboxTable;
     }
 
-    function enableICheckPlugin(){
+    function enableICheckPlugin() {
         //Enable iCheck plugin for checkboxes
         //iCheck for checkbox and radio inputs
         $('.mailbox-messages input[type="checkbox"]').iCheck({
@@ -273,10 +190,11 @@
         enableICheckPlugin();
         var inboxTable = initInboxTable();
 
-        $('input.global_filter').on('keyup', function(){
+        $('input.global_filter').on('keyup', function () {
             filterGlobal(inboxTable, $('#global_filter').val());
         });
 
+        //TODO: confirm delete function
     })
 
 </script>

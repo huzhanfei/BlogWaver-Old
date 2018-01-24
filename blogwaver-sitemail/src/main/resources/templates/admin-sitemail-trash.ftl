@@ -10,7 +10,7 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title"><@spring.message code="sitemail.draft"/></h3>
+                    <h3 class="box-title"><@spring.message code="sitemail.trash"/></h3>
 
                     <div class="box-tools pull-right">
                         <div class="has-feedback">
@@ -47,16 +47,14 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <#list 1..14 as draft>
+                            <#list 1..14 as trash>
                                 <tr>
                                     <td><input type="checkbox"/></td>
                                     <td><a href="#">Old Hu</a></td>
                                     <td><a href="#" class="col-sm-10">Old Hu please eat rice</a><a href="#"
                                                                                                    class="col-sm-2"><i
                                             class="fa fa-paperclip"></i></a></td>
-                                    <td><span class="draft text-red">[<@spring.message code="sitemail.draft"/>]</span>Let's
-                                        go to the chuzhanggui restaurant in ...
-                                    </td>
+                                    <td>Let's go to the chuzhanggui restaurant in ...</td>
                                     <td>2018/1/17 8:00</td>
                                 </tr>
                             </#list>
@@ -66,8 +64,7 @@
                                 <td><a href="#" class="col-sm-10">[response to Old Hu] about invitation</a><a href="#"
                                                                                                               class="col-sm-2"><i
                                         class="fa fa-paperclip"></i></a></td>
-                                <td><span class="draft text-red">[<@spring.message code="sitemail.draft"/>]</span>OK!
-                                </td>
+                                <td><span class="draft text-red">OK!</td>
                                 <td>2018/1/17 8:00</td>
                             </tr>
                             </tbody>
@@ -186,7 +183,7 @@
             filterGlobal(inboxTable, $('#global_filter').val());
         });
 
-        //TODO: confirm delete function
+        //TODO: confirm delete really function
     })
 
 </script></@common.content>

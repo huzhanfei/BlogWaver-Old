@@ -21,21 +21,27 @@ public class SiteMailController {
     private static final Logger LOGGER = LoggerFactory.getLogger(SiteMailController.class);
 
     @RequestMapping(value = "/inbox", method = RequestMethod.GET)
-    public String initInboxPage(){
+    public String initInboxPage() {
         LOGGER.info("initInboxPage");
         return "admin-sitemail-inbox.ftl";
     }
 
     @RequestMapping(value = "/compose", method = RequestMethod.GET)
-    public String initComposePage(){
+    public String initComposePage() {
         LOGGER.info("initComposePage");
         return "admin-sitemail-compose.ftl";
     }
 
     @RequestMapping(value = "/draft", method = RequestMethod.GET)
-    public String initDraftPage(){
+    public String initDraftPage() {
         LOGGER.info("initDraftPage");
         return "admin-sitemail-draft.ftl";
+    }
+
+    @RequestMapping(value = "/trash", method = RequestMethod.GET)
+    public String initTrashPage() {
+        LOGGER.info("initTrashPage");
+        return "admin-sitemail-trash.ftl";
     }
 
 }

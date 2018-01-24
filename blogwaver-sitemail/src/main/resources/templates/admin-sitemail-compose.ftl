@@ -18,7 +18,7 @@
                     </div>
                     <div class="form-group">
                 <textarea id="compose-textarea" class="form-control" style="height: 300px">
-                    <#-- mail content here -->
+                <#-- mail content here -->
                 </textarea>
                     </div>
                     <div class="form-group">
@@ -32,10 +32,13 @@
                 <!-- /.box-body -->
                 <div class="box-footer">
                     <div class="pull-right">
-                        <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> <@spring.message code="sitemail.draft"/></button>
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> <@spring.message code="sitemail.send"/></button>
+                        <button type="button" class="btn btn-default"><i
+                                class="fa fa-pencil"></i> <@spring.message code="sitemail.draft"/></button>
+                        <button type="submit" class="btn btn-primary"><i
+                                class="fa fa-envelope-o"></i> <@spring.message code="sitemail.send"/></button>
                     </div>
-                    <button type="reset" class="btn btn-default"><i class="fa fa-times"></i> <@spring.message code="sitemail.discard"/></button>
+                    <button type="reset" class="btn btn-default"><i
+                            class="fa fa-times"></i> <@spring.message code="sitemail.discard"/></button>
                 </div>
                 <!-- /.box-footer -->
             </div>
