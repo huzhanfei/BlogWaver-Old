@@ -32,4 +32,10 @@ public class SiteMailController {
         return "admin-sitemail-compose.ftl";
     }
 
+    @RequestMapping(value = "/draft", method = RequestMethod.GET)
+    public String initDraftPage(){
+        LOGGER.info("initDraftPage");
+        return "admin-sitemail-draft.ftl";
+    }
+
 }
