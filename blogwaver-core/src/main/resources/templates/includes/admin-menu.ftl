@@ -81,8 +81,8 @@
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="${basePath}/admin/sitemail/inbox"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.inbox"/></a></li>
-                    <li><a href="${basePath}/admin/sitemail/compose"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.compose"/></a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.inbox"/></a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.compose"/></a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.draft"/></a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.trash"/></a></li>
                 </ul>
