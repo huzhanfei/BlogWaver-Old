@@ -27,6 +27,7 @@
         <module>blogwaver-article</module>
         <module>blogwaver-core</module>
         <module>blogwaver-sitemail</module>
+        <module>blogwaver-user</module>
     </modules>
 
 
