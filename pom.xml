@@ -352,6 +352,11 @@
                 <artifactId>blogwaver-sitemail</artifactId>
                 <version>${blogwaver.version}</version>
             </dependency>
+            <dependency>
+                <groupId>cn.javacodes.blogwaver</groupId>
+                <artifactId>blogwaver-user</artifactId>
+                <version>${blogwaver.version}</version>
+            </dependency>        
 
         </dependencies>
     </dependencyManagement>
