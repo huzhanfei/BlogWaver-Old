@@ -83,8 +83,6 @@
                 <ul class="treeview-menu">
                     <li><a href="#"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.inbox"/></a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.compose"/></a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.draft"/></a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.trash"/></a></li>
                 </ul>
             </li>
             <li><a href="#"><i class="fa fa-comments"></i> <span><@spring.message code="menu.comment"/></span></a></li>
