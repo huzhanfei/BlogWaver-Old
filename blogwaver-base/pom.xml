@@ -53,7 +53,7 @@
         </dependency>
         <dependency>
             <groupId>cn.javacodes.blogwaver</groupId>
-            <artifactId>blogwaver-sitemail</artifactId>
+            <artifactId>blogwaver-user</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
