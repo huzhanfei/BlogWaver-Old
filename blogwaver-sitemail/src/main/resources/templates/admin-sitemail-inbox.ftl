@@ -1,9 +1,15 @@
 <#import "common/admin-common.ftl" as common>
 <#import "common/resource-import.ftl" as res>
-
 <@common.content>
-    <@res.cssRef url="/libs/AdminLTE/plugins/iCheck/flat/blue.css"/>
-    <@res.cssRef url="/libs/AdminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.css"/>
+<@res.cssRef url="/libs/AdminLTE/plugins/iCheck/flat/blue.css"/>
+<@res.cssRef url="/libs/AdminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.css"/>
+<section class="content-header">
+    <h1><@spring.message code="sitemail.inbox"/></h1>
+    <ol class="breadcrumb">
+        <li><a href="${basePath}/admin/dashboard"><i class="fa fa-dashboard"></i><@spring.message code="sitemail.home"/></a></li>
+        <li><a href="${basePath}/admin/sitemail/inbox"><@spring.message code="sitemail.inbox"/></a></li>
+    </ol>
+</section>
 <!-- Main content -->
 <section class="content">
     <div class="row">
@@ -11,20 +17,17 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title"><@spring.message code="sitemail.inbox"/></h3>
-
-                    <div class="box-tools pull-right">
-                        <div class="has-feedback">
-                            <input type="text" class="form-control input-sm global_filter" id="global_filter"
-                                   placeholder=<@spring.message code="sitemail.searchmail"/>>
-                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                        </div>
-                    </div>
-                    <!-- /.box-tools -->
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body no-padding">
                     <div class="mailbox-controls">
+                        <div class="box-tools pull-right">
+                            <div class="has-feedback">
+                                <input type="text" class="form-control input-sm global_filter" id="global_filter"
+                                       placeholder=<@spring.message code="sitemail.searchmail"/>>
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                        </div>
                         <!-- Check all button -->
                         <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i
                                 class="fa fa-square-o"></i>
