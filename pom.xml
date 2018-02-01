@@ -26,6 +26,7 @@
         <module>blogwaver-base</module>
         <module>blogwaver-article</module>
         <module>blogwaver-core</module>
+        <module>blogwaver-user</module>
     </modules>
 
 
@@ -339,6 +340,11 @@
             <dependency>
                 <groupId>cn.javacodes.blogwaver</groupId>
                 <artifactId>blogwaver-article</artifactId>
+                <version>${blogwaver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.javacodes.blogwaver</groupId>
+                <artifactId>blogwaver-user</artifactId>
                 <version>${blogwaver.version}</version>
             </dependency>
 

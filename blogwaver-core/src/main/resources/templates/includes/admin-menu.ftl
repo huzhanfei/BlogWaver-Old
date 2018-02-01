@@ -86,7 +86,7 @@
                 </ul>
             </li>
             <li><a href="#"><i class="fa fa-comments"></i> <span><@spring.message code="menu.comment"/></span></a></li>
-            <li><a href="#"><i class="fa fa-user"></i> <span><@spring.message code="menu.profile"/></span></a></li>
+            <li><a href="${basePath}/admin/user/information"><i class="fa fa-user"></i> <span><@spring.message code="menu.profile"/></span></a></li>
 
 
             <li class="header"><span><@spring.message code="menu.system.header"/></span></li>
@@ -113,8 +113,8 @@
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> <@spring.message code="menu.user.list"/></a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> <@spring.message code="menu.user.create"/></a></li>
+                    <li><a href="${basePath}/admin/user/list"><i class="fa fa-circle-o"></i> <@spring.message code="menu.user.list"/></a></li>
+                    <li><a href="${basePath}/admin/user/create"><i class="fa fa-circle-o"></i> <@spring.message code="menu.user.create"/></a></li>
                 </ul>
             </li>
             <li class="treeview">
