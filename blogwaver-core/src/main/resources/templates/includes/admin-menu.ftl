@@ -87,7 +87,7 @@
                     <li><a href="${basePath}/admin/sitemail/trash"><i class="fa fa-circle-o"></i> <@spring.message code="menu.mail.trash"/></a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fa fa-comments"></i> <span><@spring.message code="menu.comment"/></span></a></li>
+            <li><a href="${basePath}/admin/comment/list"><i class="fa fa-comments"></i> <span><@spring.message code="menu.comment"/></span></a></li>
             <li><a href="${basePath}/admin/user/information"><i class="fa fa-user"></i> <span><@spring.message code="menu.profile"/></span></a></li>
 
 

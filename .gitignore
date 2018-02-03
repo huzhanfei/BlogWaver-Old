@@ -34,3 +34,5 @@ out/
 src/main/webapp/logs
 *.DS_Store
 classes/
+
+rebel.xml

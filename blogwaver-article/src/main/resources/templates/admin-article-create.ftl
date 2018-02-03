@@ -2,10 +2,6 @@
 <#import "common/resource-import.ftl" as res>
 <@common.content>
 <title>撰写文章</title>
-<!-- Select2 -->
-<@res.cssRef url="/libs/select2/dist/css/select2.min.css"/>
-<!-- Theme style -->
-<@res.cssRef url="/libs/AdminLTE/dist/css/AdminLTE.min.css"/>
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -91,15 +87,11 @@
 
                             </div>
                         </div>
-
-
                     </form>
                 </div>
                 <!-- /.box-body -->
             </div>
             <!-- /.box -->
-
-
         </div>
         <!-- /.col-->
     </div>

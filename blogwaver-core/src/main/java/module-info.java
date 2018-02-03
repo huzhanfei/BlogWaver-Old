@@ -1,8 +1,6 @@
 /**
  * blogwaver
  *
- * @author huzhanfei
- * @version 1.0
  * @since 2018/1/14
  */
 module blogwaver.core {
@@ -15,6 +13,7 @@ module blogwaver.core {
     exports cn.javacodes.blogwaver.core.util;
     exports cn.javacodes.blogwaver.core.i18n;
     exports cn.javacodes.blogwaver.core.common.datatables;
+    exports cn.javacodes.blogwaver.core.model;
 
 
     requires javax.servlet.api;

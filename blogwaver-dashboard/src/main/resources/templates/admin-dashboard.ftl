@@ -1,4 +1,4 @@
-<#import "common/admin-dashboard-common.ftl" as common>
+<#import "common/admin-common.ftl" as common>
 <@common.content>
 
 <!-- Content Header -->

@@ -28,6 +28,8 @@
         <module>blogwaver-core</module>
         <module>blogwaver-user</module>
         <module>blogwaver-sitemail</module>
+        <module>blogwaver-comment</module>
+        <module>blogwaver-dashboard</module>
     </modules>
 
 
@@ -341,6 +343,26 @@
             <dependency>
                 <groupId>cn.javacodes.blogwaver</groupId>
                 <artifactId>blogwaver-article</artifactId>
+                <version>${blogwaver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.javacodes.blogwaver</groupId>
+                <artifactId>blogwaver-sitemail</artifactId>
+                <version>${blogwaver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.javacodes.blogwaver</groupId>
+                <artifactId>blogwaver-user</artifactId>
+                <version>${blogwaver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.javacodes.blogwaver</groupId>
+                <artifactId>blogwaver-comment</artifactId>
+                <version>${blogwaver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.javacodes.blogwaver</groupId>
+                <artifactId>blogwaver-dashboard</artifactId>
                 <version>${blogwaver.version}</version>
             </dependency>
 

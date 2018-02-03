@@ -18,6 +18,8 @@
     <@cssRef url="/libs/ionicons/css/ionicons.min.css"/>
     <!-- NProgress -->
     <@cssRef url="/libs/nprogress/nprogress.css"/>
+    <!-- Select2 -->
+    <@cssRef url="/libs/select2/dist/css/select2.min.css"/>
     <!-- Theme style -->
     <@cssRef url="/libs/AdminLTE/dist/css/AdminLTE.min.css"/>
     <!-- admin skins -->
@@ -38,9 +40,9 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-    </#if>
-        <#nested >
-    <#if !isPjax>
+</#if>
+    <#nested >
+<#if !isPjax>
 
     </div>
     <!-- /.content-wrapper -->
