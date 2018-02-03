@@ -53,6 +53,10 @@
         </dependency>
         <dependency>
             <groupId>cn.javacodes.blogwaver</groupId>
+            <artifactId>blogwaver-user</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.javacodes.blogwaver</groupId>
             <artifactId>blogwaver-sitemail</artifactId>
         </dependency>
         <dependency>
